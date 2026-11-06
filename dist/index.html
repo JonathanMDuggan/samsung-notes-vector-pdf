@@ -1,0 +1,29 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="description" content="Convert Samsung Notes files into vector PDFs, privately in your browser.">
+  <title>Noteform — Samsung Notes to vector PDF</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="app.js" defer></script>
+</head>
+<body>
+  <header><a class="brand" href="./" aria-label="Noteform home"><span class="brand-mark">n<span>↗</span></span>noteform<span class="beta">FOR SAMSUNG NOTES</span></a><span class="local"><span></span>Files stay on your device</span></header>
+  <main>
+    <section class="intro"><p class="eyebrow">YOUR HANDWRITING. WITHOUT THE PIXELS.</p><h1>Made by hand.<br><span>Kept as vectors.</span></h1><p class="lead">Turn a Samsung Notes file into a beautifully sharp PDF.<br class="desktop"> Every pen stroke stays a vector, at any zoom.</p></section>
+    <section class="converter" aria-labelledby="converter-title">
+      <div class="card-heading"><div><p class="step">01 / CHOOSE YOUR NOTE</p><h2 id="converter-title">A better export starts here.</h2></div><span class="format">.sdocx → .pdf</span></div>
+      <label class="dropzone" id="dropzone" for="file"><input type="file" id="file" accept=".sdocx"><svg width="42" height="48" viewBox="0 0 42 48" fill="none" aria-hidden="true"><path d="M9 2h17l14 14v27a3 3 0 0 1-3 3H5a3 3 0 0 1-3-3V9" stroke="currentColor" stroke-width="2"/><path d="M26 2v14h14M12 29c5-11 3 14 8 3s6 4 11-4" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg><strong id="file-label">Drop your Samsung note here</strong><span id="file-meta">or <u>choose a file</u> · .sdocx, up to 150 MB</span></label>
+      <div class="options"><label><input type="checkbox" id="background" checked><span>Include paper & PDF backgrounds<small>Images and your original pen strokes are preserved.</small></span></label></div>
+      <div class="convert-row"><p>One note in.<br><strong>One vector PDF out.</strong></p><button id="convert" disabled>Convert to PDF <span aria-hidden="true">↗</span></button><button id="cancel" class="cancel" hidden>Cancel</button></div>
+      <div id="status-area" hidden><div class="progress-track"><div id="progress"></div></div><p id="status" role="status" aria-live="polite"></p></div>
+      <div id="result" hidden><div><span class="done-icon">✓</span><h3>Your PDF is ready.</h3><p id="result-meta"></p></div><a id="download" class="download">Download PDF ↓</a></div>
+      <details id="notices" hidden><summary>Export notices</summary><pre id="warnings"></pre></details>
+      <p class="privacy">Conversion happens entirely in your browser. Your note is never uploaded.</p>
+    </section>
+    <section class="features" aria-label="How it works"><article><span>01</span><h3>Export your note</h3><p>In Samsung Notes, choose Share or Save as file, then select Samsung Notes file (.sdocx).</p></article><article><span>02</span><h3>Keep the real strokes</h3><p>The converter reads the original pen data, preserving pressure and stroke shapes.</p></article><article><span>03</span><h3>Zoom in. Keep going.</h3><p>Download a PDF with vector handwriting, selectable typed text, and your embedded images.</p></article></section>
+    <aside class="note">Works with Samsung Notes .sdocx files. A screenshot or an already rasterized PDF cannot recover the original pen strokes. Typed-text fonts and line wrapping may differ slightly.</aside>
+  </main>
+  <footer><span>noteform / A little more freedom for your notes.</span><span>Independent tool. Not affiliated with Samsung.</span></footer>
+</body>
+</html>
